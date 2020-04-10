@@ -13,9 +13,9 @@ def get_indices_of_item_weights(weights, length, limit):
         hash_table_insert(ht, w, idx)
 
     for idx, w in enumerate(weights):
-        other_idx = hash_table_retrieve(ht, limit-w)
-        if current:
-            return (idx, current) if w > weights[other_idx] else (current, idx)
+        a = hash_table_retrieve(ht, limit-w)
+        if a:
+            return (idx, a) if w > weights[a] else (a, idx)
 
     return None
 
