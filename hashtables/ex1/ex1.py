@@ -9,13 +9,13 @@ from hashtables import (HashTable,
 def get_indices_of_item_weights(weights, length, limit):
     ht = HashTable(16)
 
-    for w in weights:
-        hash_table_insert(ht, w, w)
+    for idx, w in enumerate(weights):
+        hash_table_insert(ht, w, idx)
 
-    for w in weights:
-        if hash_table_retrieve(ht, limit-w:
-            a = hash_table_retrieve
-
+    for idx, w in enumerate(weights):
+        other_idx = hash_table_retrieve(ht, limit-w)
+        if current:
+            return (idx, current) if w > weights[other_idx] else (current, idx)
 
     return None
 
